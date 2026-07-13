@@ -1,19 +1,13 @@
-<h1 align="center">
-  <img src="https://img.shields.io/badge/Crypto-Ledger-00F5D4?style=for-the-badge&logo=bitcoin&logoColor=white" alt="Crypto Ledger" />
-</h1>
+# Blackchain — Crypto Transaction Ledger
 
-<p align="center">
-  A premium crypto transaction ledger with a glassmorphism UI, SHA-256 integrity verification, real-time analytics, and a full REST API — built as a full-stack monorepo.
-</p>
+A premium crypto transaction ledger with a glassmorphism UI, SHA-256 integrity verification, real-time analytics, and a full REST API — built as a full-stack monorepo.
 
-<p align="center">
-  <img src="https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react" />
-  <img src="https://img.shields.io/badge/Node.js-Express-339933?style=flat-square&logo=node.js" />
-  <img src="https://img.shields.io/badge/Vite-8-646CFF?style=flat-square&logo=vite" />
-  <img src="https://img.shields.io/badge/TailwindCSS-v4-06B6D4?style=flat-square&logo=tailwindcss" />
-  <img src="https://img.shields.io/badge/Framer_Motion-✓-EF008F?style=flat-square" />
-  <img src="https://img.shields.io/badge/License-MIT-green?style=flat-square" />
-</p>
+![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react)
+![Node.js](https://img.shields.io/badge/Node.js-Express-339933?style=flat-square&logo=node.js)
+![Vite](https://img.shields.io/badge/Vite-8-646CFF?style=flat-square&logo=vite)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-v4-06B6D4?style=flat-square&logo=tailwindcss)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-%E2%9C%93-EF008F?style=flat-square)
+![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
 
 ---
 
@@ -47,7 +41,7 @@
 - **Live Statistics** — Volume charts, peer-to-peer flow maps, daily breakdowns, and aggregate KPIs
 - **Global Search** — Search across TX IDs, wallet addresses, amounts, and hashes in real time
 - **QR Code Export** — Each transaction detail page generates a scannable QR code
-- **Glassmorphism UI** — Deep navy (`#050816`) background with teal/purple accents, backdrop-blur cards, and animated ambient blobs
+- **Glassmorphism UI** — Deep navy `#050816` background with teal/purple accents, backdrop-blur cards, and animated ambient blobs
 - **Animated Page Transitions** — Framer Motion `AnimatePresence` with staggered children on every route
 - **Responsive Layout** — Mobile-first sidebar drawer + desktop fixed sidebar, fluid grid system
 - **JSON File Database** — Zero-config persistence; no database server required
@@ -58,8 +52,9 @@
 ## Tech Stack
 
 ### Backend
+
 | Package | Version | Role |
-|---|---|---|
+| --- | --- | --- |
 | Node.js | 18+ | Runtime |
 | Express | 4 | HTTP framework |
 | cors | ^2 | Cross-origin resource sharing |
@@ -68,8 +63,9 @@
 | dotenv | ^16 | Environment configuration |
 
 ### Frontend
+
 | Package | Version | Role |
-|---|---|---|
+| --- | --- | --- |
 | React | 19 | UI library |
 | Vite | 8 | Build tool + dev server |
 | Tailwind CSS | v4 (`@tailwindcss/vite`) | Utility-first styling |
@@ -92,11 +88,11 @@
 blackchain/
 ├── backend/
 │   ├── config/
-│   │   └── constants.js          # PORT, file paths
+│   │   └── constants.js             # PORT and file paths
 │   ├── controllers/
 │   │   └── transactionController.js
 │   ├── data/
-│   │   └── transactions.json     # Flat-file database
+│   │   └── transactions.json        # Flat-file database
 │   ├── middleware/
 │   │   ├── errorHandler.js
 │   │   └── validation.js
@@ -108,7 +104,7 @@ blackchain/
 │   │   └── transactionService.js
 │   ├── utils/
 │   │   ├── balanceCalculator.js
-│   │   ├── hashGenerator.js      # SHA-256 hash builder
+│   │   ├── hashGenerator.js         # SHA-256 hash builder
 │   │   └── idGenerator.js
 │   ├── .env
 │   ├── package.json
@@ -136,7 +132,7 @@ blackchain/
 │   │   ├── context/
 │   │   │   └── AppContext.jsx
 │   │   ├── hooks/
-│   │   │   └── useTransactions.js  # All TanStack Query hooks
+│   │   │   └── useTransactions.js   # All TanStack Query hooks
 │   │   ├── pages/
 │   │   │   ├── About.jsx
 │   │   │   ├── ApiDocs.jsx
@@ -151,7 +147,7 @@ blackchain/
 │   │   │   ├── Verification.jsx
 │   │   │   └── Wallets.jsx
 │   │   ├── services/
-│   │   │   └── api.js              # Axios instance + named API clients
+│   │   │   └── api.js               # Axios instance + named API clients
 │   │   ├── App.jsx
 │   │   ├── index.css
 │   │   └── main.jsx
@@ -159,9 +155,27 @@ blackchain/
 │   ├── package.json
 │   └── vite.config.js
 │
-├── package.json                    # Monorepo root — concurrently scripts
+├── package.json                     # Monorepo root — concurrently scripts
 └── README.md
 ```
+
+---
+
+## Pages
+
+| Route | Page | Description |
+| --- | --- | --- |
+| `/` | Dashboard | KPI tiles, volume chart, recent transactions, system status |
+| `/transactions` | Transactions | Paginated table with sort, filter, copy hash, delete |
+| `/transactions/:id` | Transaction Details | Full field breakdown, hash visualizer, QR code |
+| `/create` | Create Transaction | Validated form with live transfer preview |
+| `/wallets` | Wallets | Wallet list, balance chart, per-address history |
+| `/statistics` | Statistics | 8 KPI tiles + 4 detailed chart visualizations |
+| `/verify` | Verification | Paste any TX ID to verify hash integrity |
+| `/search` | Search | Live full-text search across all fields |
+| `/api-docs` | API Docs | Built-in REST API reference |
+| `/settings` | Settings | App preferences |
+| `/about` | About | Project info |
 
 ---
 
@@ -172,7 +186,7 @@ Base URL: `http://localhost:3000`
 ### Transactions
 
 | Method | Endpoint | Description |
-|---|---|---|
+| --- | --- | --- |
 | `GET` | `/transactions` | List all transactions (sorted newest first) |
 | `POST` | `/transactions` | Create a new transaction |
 | `GET` | `/transactions/:id` | Get a single transaction by ID |
@@ -183,14 +197,14 @@ Base URL: `http://localhost:3000`
 ### Wallets
 
 | Method | Endpoint | Description |
-|---|---|---|
+| --- | --- | --- |
 | `GET` | `/wallet/:address` | Get balance + transaction history for an address |
 
 ### Analytics
 
 | Method | Endpoint | Description |
-|---|---|---|
-| `GET` | `/stats` | Aggregate statistics (total volume, count, averages, top wallets) |
+| --- | --- | --- |
+| `GET` | `/stats` | Aggregate stats (volume, count, averages, top wallets) |
 | `GET` | `/search?q=<query>` | Full-text search across all transaction fields |
 
 ### Example — Create Transaction
@@ -202,6 +216,7 @@ curl -X POST http://localhost:3000/transactions \
 ```
 
 **Response**
+
 ```json
 {
   "id": "TX-0d12c453-00bd-46b2-9baa-58c5ad94495a",
@@ -220,6 +235,7 @@ curl http://localhost:3000/transactions/TX-0d12c453-00bd-46b2-9baa-58c5ad94495a/
 ```
 
 **Response**
+
 ```json
 {
   "valid": true,
@@ -251,15 +267,15 @@ npm run install:all
 ### Running in Development
 
 ```bash
-# Start both servers simultaneously from the monorepo root
 npm run dev
 ```
 
-This starts:
-- **API server** → `http://localhost:3000` (Express + JSON file DB)
-- **Web app** → `http://localhost:5173` (Vite dev server with HMR)
+This starts both servers simultaneously:
 
-The frontend proxies all `/api/*` requests to the backend automatically — no CORS configuration needed on the client.
+- **API** → `http://localhost:3000` (Express + JSON flat-file DB)
+- **Web** → `http://localhost:5173` (Vite with HMR)
+
+The frontend Vite dev server proxies all `/api/*` requests to the backend — no manual CORS configuration needed.
 
 ### Building for Production
 
@@ -289,25 +305,7 @@ Each transaction hash is computed at creation time from the transaction's core f
 SHA-256( id + sender + receiver + amount + timestamp )
 ```
 
-The hash is stored alongside the record in `transactions.json`. The `/verify` endpoint recomputes the hash from the stored fields and compares it byte-for-byte to the stored value. Any mismatch means the record was modified after creation.
-
----
-
-## Pages
-
-| Route | Page | Description |
-|---|---|---|
-| `/` | Dashboard | KPI tiles, volume chart, recent transactions, system status |
-| `/transactions` | Transactions | Paginated table with sort, filter, copy hash, delete |
-| `/transactions/:id` | Transaction Details | Full field breakdown, hash visualizer, QR code |
-| `/create` | Create Transaction | Validated form with live transfer preview |
-| `/wallets` | Wallets | Wallet list, balance chart, per-address history |
-| `/statistics` | Statistics | 8 KPI tiles + 4 detailed Recharts visualizations |
-| `/verify` | Verification | Paste any TX ID to verify hash integrity |
-| `/search` | Search | Live full-text search across all fields |
-| `/api-docs` | API Docs | Built-in REST API reference |
-| `/settings` | Settings | App preferences |
-| `/about` | About | Project info |
+The hash is stored alongside the record in `transactions.json`. The `/verify` endpoint recomputes the hash from the stored fields and compares it byte-for-byte to the stored value. A mismatch means the record was modified after creation.
 
 ---
 
@@ -317,28 +315,12 @@ MIT License
 
 Copyright (c) 2026 Haseeb Zahid
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ---
 
-<p align="center">
-  Made by <a href="https://github.com/haseebzahid9">@haseebzahid9</a>
-</p>
-#   c r y p t o - t r a n s a c t i o n - l e d g e r  
- 
+Made by [@haseebzahid9](https://github.com/haseebzahid9)
