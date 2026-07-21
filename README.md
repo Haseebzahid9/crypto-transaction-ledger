@@ -35,7 +35,7 @@ A premium crypto transaction ledger with a glassmorphism UI, SHA-256 integrity v
 
 ## Features
 
-- **Transaction Ledger** — Create, view, and delete transactions with a full audit trail
+- **Transaction Ledger** — Create,  view, and delete transactions with a full audit trail
 - **SHA-256 Integrity Verification** — Every transaction carries a tamper-evident hash; verify any TX ID on demand
 - **Wallet Analytics** — Per-address balance tracking derived from all sent/received transactions
 - **Live Statistics** — Volume charts, peer-to-peer flow maps, daily breakdowns, and aggregate KPIs
