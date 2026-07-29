@@ -1,7 +1,7 @@
 #  Blackchain — Crypto Transaction Ledger
 
 A premium crypto transaction ledger with a glassmorphism UI, SHA-256 integrity verification, real-time analytics, and a full REST API — built as a full-stack monorepo. 
- 
+  
 ![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react)
 ![Node.js](https://img.shields.io/badge/Node.js-Express-339933?style=flat-square&logo=node.js)
 ![Vite](https://img.shields.io/badge/Vite-8-646CFF?style=flat-square&logo=vite)
